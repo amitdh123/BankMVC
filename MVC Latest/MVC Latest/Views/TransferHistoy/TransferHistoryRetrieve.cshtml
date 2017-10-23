@@ -1,0 +1,30 @@
+﻿@model MVC_Latest.Models.TransferHistoryList
+
+@{
+    ViewBag.Title = "TransferHistoryRetrieve";
+    Layout = "~/Views/Master.cshtml";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.transferHistoryList[0].FromAccountNum)</th>
+            <th>@Html.DisplayNameFor(m => m.transferHistoryList[0].ToAccountNum)</th>
+            <th>@Html.DisplayNameFor(m => m.transferHistoryList[0].Amount)</th>
+            <th>@Html.DisplayNameFor(m => m.transferHistoryList[0].CheckingAccountNumber)</th>
+        </tr>
+    </thead>
+    <tbody> 
+        @foreach (TransferHistory th in Model.transferHistoryList)
+        {
+            <tr>
+                <td>@th.FromAccountNum</td>
+                @*<td>@Html.DisplayFor(m=>th, "FromAccountNum")</td>*@
+                <td>@th.ToAccountNum</td>
+                <td>@th.Amount</td>
+                <td>@th.CheckingAccountNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,18 @@
+﻿@model MVC_Latest.Models.UserInfo
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Master.cshtml";
+}
+
+@Html.BeginForm(){
+<label>Username</label>
+@Html.TextAreaFor(model => model.username)
+<label>Password</label>
+@Html.TextAreaFor(model => model.password)
+<label>Checking Account Number</label>
+@Html.TextAreaFor(model => model.checkingAccountNumber)
+<input type="submit" />
+}
+@Model.status;
+

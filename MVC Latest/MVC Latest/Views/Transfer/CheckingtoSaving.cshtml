@@ -1,0 +1,34 @@
+﻿@model MVC_Latest.Models.Transfer
+
+@{
+    ViewBag.Title = "CheckingtoSaving";
+    Layout = "~/Views/Master.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+            <h3 class="text-info">Checking Balance: <span>@Html.DisplayFor(model => model.chkBalance)</span></h3>
+            <h3 class="text-success">Saving Balance: <span>@Html.DisplayFor(model => model.savBalance)</span></h3>    
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{ 
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        @Html.TextAreaFor(model => model.amtToTransfer, new { @class = "form-control", placeholder = "Amount To Transfer" })
+                        <div class="input-group-addon">.00</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Transfer cash</button>
+        </div>
+    </div>
+    <br />
+    <h4>@Model.status</h4>
+}
+
+

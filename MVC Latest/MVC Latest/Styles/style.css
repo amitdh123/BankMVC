@@ -1,0 +1,7 @@
+﻿body {
+}
+.sidebar-list li {list-style:none; font-size: 16px; border:1px solid #f0f0f0; padding:3px;}
+.header-project{text-align:center; font-size:20px; padding:20px;font-weight:bolder;}
+.header-bank{text-align:center;font-size:30px;}
+.content-home{text-align: center;}
+.form-signin-heading{text-align:center; margin-left:100px;}

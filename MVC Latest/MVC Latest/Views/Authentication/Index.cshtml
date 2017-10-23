@@ -1,0 +1,31 @@
+﻿@model MVC_Latest.Models.AuthenticationData
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Master.cshtml";
+}
+
+ 
+@using (Html.BeginForm())
+{
+
+    <div class="col-lg-6 form-signin-heading">
+        <form class="form-signin">
+            <h3>Please Login</h3>
+            <label for="inputEmail" class="sr-only">Username</label>
+            @Html.TextBoxFor(model => model.username , new {@class = "form-control" , @id = "inputEmail" , placeholder="Username" })
+            <br />
+            <label for="inputPassword" class="sr-only">Password</label>
+            @Html.TextBoxFor(model => model.password , new { @class = "form-control", @id = "inputPassword" , placeholder = "Password" , type="password"})
+            <br />
+            <button class="btn btn-md btn-danger btn-block" type="submit">Login</button>
+        </form>
+
+    </div> <!-- /container -->
+}
+    
+
+
+
+
+

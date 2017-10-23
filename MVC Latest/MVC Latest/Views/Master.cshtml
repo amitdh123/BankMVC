@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    
+               
+    <div class="header-project">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/authentication/index">Login</a></li>
+            <li><a href="/userinfo/register">Sign Up</a></li>
+            <li><a href="/home/index">Home</a></li>
+            <li><a href="/home/news">News</a></li>
+            <li>@Html.ActionLink("Checking to Saving", "CheckingtoSaving", "Transfer")</li>
+            <li><a href="/transfer/SavingtoChecking">Transfer Sav to Chk</a></li>
+            <li><a href="/transferhistoy/transferhistoryretrieve">Transfer History</a></li>
+            <li><a href="/userinfo/updatepassword">Update Password</a></li>
+        </ul>
+    </div>
+    </br>
+    </br>
+    <div class="header-bank">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+    </div>
+
+
+
+
+
+
+
+        <div class="col-lg-8">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
